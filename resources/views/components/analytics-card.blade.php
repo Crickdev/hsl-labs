@@ -26,10 +26,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="chart-desc-{{ $chartType }}-{{ Str::slug($title) }}" class="sr-only">
-				 Pie chart showing transaction distribution: Sale represents 20%, Distribute represents 30%, and Return represents 40%. The overall success rate is 80%.
-			</div>
-			<div class="mt-6 flex justify-center lg:flex-nowrap flex-wrap w-full">
+
+			<div class="mt-6 flex justify-center lg:flex-nowrap wrap_txt flex-wrap w-full">
 				<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
 					<div class="w-3 h-3 bg-purple-400 rounded-full flex-shrink-0" aria-hidden="true">
 					</div>

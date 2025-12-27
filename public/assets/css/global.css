@@ -1,65 +1,77 @@
-body{font-family: "Plus Jakarta Sans", sans-serif;
+body {
+	font-family: "Plus Jakarta Sans", sans-serif;
 
 }
+
 .bottom_bar svg {
-    height: 31px;
+	height: 31px;
 }
 
-  .sort-icon {
-        display: inline-block;
-        margin-left: 0.5rem;
-        /* opacity: 0.8; */
-        transition: opacity 0.2s;
-        vertical-align: middle;
-    }
-    th.sortable:hover .sort-icon {
-        opacity: 0.6;
-    }
-    .sort-icon.active {
-        opacity: 1;
-    }
-    th.sortable {
-        cursor: pointer;
-        user-select: none;
-    }
-     .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-    }
+.sort-icon {
+	display: inline-block;
+	margin-left: 0.5rem;
+	/* opacity: 0.8; */
+	transition: opacity 0.2s;
+	vertical-align: middle;
+}
 
-    .sort-icon.active {
-        transform: rotate(180deg);
-        }
-         .kpi_card {
-                position: relative;
-            }
-            .kpi_card img{
-                position: absolute;
-                right: 22px;
-                top: 22px;
-                /* padding: 1rem !important; */
-            }
-        /* .sort-icon.active svg pah{fill:#cccc} */
-        @media only screen and (min-width: 1200px) and (max-width:1366px) {
-            .kpi_title {
-                font-size: 36px !important;
-                position: relative;
-            }
-             .kpi_card {
-                position: relative;
-            }
-            .kpi_card img{
-         
-                top: 22px;
-                /* padding: 1rem !important; */
-                height: 30px !important;
-            }
-           
-        }
+th.sortable:hover .sort-icon {
+	opacity: 0.6;
+}
+
+.sort-icon.active {
+	opacity: 1;
+}
+
+th.sortable {
+	cursor: pointer;
+	user-select: none;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.sort-icon.active {
+	transform: rotate(180deg);
+}
+
+.kpi_card {
+	position: relative;
+}
+
+.kpi_card img {
+	position: absolute;
+	right: 22px;
+	top: 22px;
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1366px) {
+	.kpi_title {
+		font-size: 36px !important;
+		position: relative;
+	}
+
+	.kpi_card {
+		position: relative;
+	}
+
+	.wrap_txt {
+		flex-wrap: wrap !important;
+	}
+
+	.kpi_card img {
+
+		top: 22px;
+		height: 30px !important;
+	}
+
+}
