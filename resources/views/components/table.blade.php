@@ -127,9 +127,6 @@
 	</tbody>
 	</table>
 	<div id="no-results" class="hidden text-center py-12" role="alert" aria-live="polite">
-		<svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true">
-		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-		</svg>
 		<p class="text-gray-500 text-lg font-medium">
 			No Results Found
 		</p>
