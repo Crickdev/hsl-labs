@@ -8,7 +8,7 @@ body{font-family: "Plus Jakarta Sans", sans-serif;
   .sort-icon {
         display: inline-block;
         margin-left: 0.5rem;
-        opacity: 0.3;
+        /* opacity: 0.8; */
         transition: opacity 0.2s;
         vertical-align: middle;
     }
@@ -33,3 +33,8 @@ body{font-family: "Plus Jakarta Sans", sans-serif;
         white-space: nowrap;
         border-width: 0;
     }
+
+    .sort-icon.active {
+        transform: rotate(180deg);
+        }
+        /* .sort-icon.active svg pah{fill:#cccc} */

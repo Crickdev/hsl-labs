@@ -18,32 +18,6 @@ dropdown.classList.add('invisible', 'opacity-0');
 }
 });
 
-// function toggleDropdown() {
-//   const dropdown = document.getElementById("profile-dropdown");
-//   const trigger = document.getElementById("profile-trigger");
-
-//   const isOpen = dropdown.classList.contains("opacity-100");
-
-//   dropdown.classList.toggle("opacity-100");
-//   dropdown.classList.toggle("visible");
-//   dropdown.classList.toggle("opacity-0");
-//   dropdown.classList.toggle("invisible");
-
-//   trigger.setAttribute("aria-expanded", !isOpen);
-// }
-
-// // Close dropdown on ESC
-// document.addEventListener("keydown", (e) => {
-//   if (e.key === "Escape") {
-//     const dropdown = document.getElementById("profile-dropdown");
-//     const trigger = document.getElementById("profile-trigger");
-
-//     dropdown.classList.remove("opacity-100", "visible");
-//     dropdown.classList.add("opacity-0", "invisible");
-//     trigger.setAttribute("aria-expanded", "false");
-//   }
-// });
-
 
 
 

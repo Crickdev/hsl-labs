@@ -1,89 +1,68 @@
 <div class="col-span-12 md:col-span-6 lg:col-span-4">
-    <div class="bg-white rounded-2xl h-full flex flex-col lg:justify-between p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
-        
-        <div class="flex items-start justify-between mb-6">
-            <div class="flex-1">
-                <h3 class="text-lg font-bold text-black" id="chart-title-{{ $chartType }}-{{ Str::slug($title) }}">
-                    {{ $title }}
-                </h3>
-             
-            </div>
-            <button 
-                aria-label="More options for {{ $title }}" 
-                class="p-1.5 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition-colors">
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
-                </svg>
-            </button>
-        </div>
+	<div class="bg-white rounded-2xl h-full flex flex-col p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+		<div class="flex items-start mb-6">
+			<div class="flex-1">
+				<h3 class="text-lg font-bold text-black" id="chart-title-{{ $chartType }}-{{ Str::slug($title) }}">
+				{{ $title }} </h3>
+			</div>
 
-        @if($chartType === 'pie')
-            <div class="flex flex-col items-center" role="img" aria-labelledby="chart-title-{{ $chartType }}-{{ Str::slug($title) }} chart-desc-{{ $chartType }}-{{ Str::slug($title) }}">
-                <div class="relative w-[280px] h-[280px] lg:w-[220px] lg:h-[220px] mb-4">
-                    <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200" aria-hidden="true">
-                        <title>Pie chart showing transaction distribution</title>
-                        <circle cx="100" cy="100" r="80" fill="none" stroke="#f3f4f6" stroke-width="25"/>
-                        <circle cx="100" cy="100" r="80" fill="none" stroke="#0066FF" stroke-width="25" 
-                                stroke-dasharray="201 302" stroke-linecap="round" aria-label="Return: 40%"
-                                class="transition-all duration-1000 ease-out hover:stroke-width-22"/>
-                        <circle cx="100" cy="100" r="80" fill="none" stroke="#11857F" stroke-width="25" 
-                                stroke-dasharray="100.5 402.5" stroke-dashoffset="-201" stroke-linecap="round" aria-label="Sale: 20%"
-                                class="transition-all duration-1000 ease-out hover:stroke-width-22"/>
-                        <circle cx="100" cy="100" r="80" fill="none" stroke="#F66D75" stroke-width="25" 
-                                stroke-dasharray="150.75 352.25" stroke-dashoffset="-301.5" stroke-linecap="round" aria-label="Distribute: 30%"
-                                class="transition-all duration-1000 ease-out hover:stroke-width-22"/>
-                    </svg>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                        <div class="text-3xl lg:text-4xl font-bold text-gray-800" aria-hidden="true">80%</div>
-                        <div class="text-sm text-gray-500 mt-1" aria-hidden="true">Success Rate</div>
-                    </div>
-                </div>
-
-                <!-- Accessible description -->
-                <div id="chart-desc-{{ $chartType }}-{{ Str::slug($title) }}" class="sr-only">
-                    Pie chart showing transaction distribution: Sale represents 20%, Distribute represents 30%, and Return represents 40%. The overall success rate is 80%.
-                </div>
-
-                <!-- Legend -->
-                <div class="mt-6 flex  justify-center flex-wrap w-full">
-                    <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
-                        <div class="w-3 h-3 bg-purple-400 rounded-full flex-shrink-0" aria-hidden="true"></div>
-                        <span class="text-sm font-medium text-gray-700">Sale</span>
-                        <span class="text-sm text-gray-500">20%</span>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
-                        <div class="w-3 h-3 bg-teal-600 rounded-full flex-shrink-0" aria-hidden="true"></div>
-                        <span class="text-sm font-medium text-gray-700">Distribute</span>
-                        <span class="text-sm text-gray-500">30%</span>
-                    </div>
-                    <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
-                        <div class="w-3 h-3 bg-orange-500 rounded-full flex-shrink-0" aria-hidden="true"></div>
-                        <span class="text-sm font-medium text-gray-700">Return</span>
-                        <span class="text-sm text-gray-500">40%</span>
-                    </div>
-                </div>
-            </div>
-
-        @else
-            <div class="relative {{ $chartType === 'doughnut' ? 'mt-[12px]' : '' }}">
-                <canvas 
-                    id="chart-{{ $chartType }}-{{ Str::slug($title) }}" 
-                    aria-labelledby="chart-title-{{ $chartType }}-{{ Str::slug($title) }} chart-desc-{{ $chartType }}-{{ Str::slug($title) }}"
-                    role="img" class="h-[{{ $height }}] " >
-                </canvas>
-
-       
-            </div>
-        @endif
-    </div>
+		</div>
+		 @if($chartType === 'pie')
+		<div class="flex flex-col items-center mt-3" role="img" aria-labelledby="chart-title-{{ $chartType }}-{{ Str::slug($title) }} chart-desc-{{ $chartType }}-{{ Str::slug($title) }}">
+			<div class="relative w-[280px] h-[280px] lg:w-[220px] lg:h-[220px] mb-4">
+				<svg class="w-full h-full transform -rotate-90" viewbox="0 0 200 200" aria-hidden="true">
+				<title>Pie chart showing transaction distribution</title>
+				<circle cx="100" cy="100" r="80" fill="none" stroke="#f3f4f6" stroke-width="25"/>
+				<circle cx="100" cy="100" r="80" fill="none" stroke="#0066FF" stroke-width="25" stroke-dasharray="201 302" stroke-linecap="round" aria-label="Return: 40%" class="transition-all duration-1000 ease-out hover:stroke-width-22"/>
+				<circle cx="100" cy="100" r="80" fill="none" stroke="#11857F" stroke-width="25" stroke-dasharray="100.5 402.5" stroke-dashoffset="-201" stroke-linecap="round" aria-label="Sale: 20%" class="transition-all duration-1000 ease-out hover:stroke-width-22"/>
+				<circle cx="100" cy="100" r="80" fill="none" stroke="#F66D75" stroke-width="25" stroke-dasharray="150.75 352.25" stroke-dashoffset="-301.5" stroke-linecap="round" aria-label="Distribute: 30%" class="transition-all duration-1000 ease-out hover:stroke-width-22"/>
+				</svg>
+				<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+					<div class="text-3xl lg:text-4xl font-bold text-gray-800" aria-hidden="true">
+						80%
+					</div>
+					<div class="text-sm text-gray-500 mt-1" aria-hidden="true">
+						Success Rate
+					</div>
+				</div>
+			</div>
+			<div id="chart-desc-{{ $chartType }}-{{ Str::slug($title) }}" class="sr-only">
+				 Pie chart showing transaction distribution: Sale represents 20%, Distribute represents 30%, and Return represents 40%. The overall success rate is 80%.
+			</div>
+			<div class="mt-6 flex justify-center lg:flex-nowrap flex-wrap w-full">
+				<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+					<div class="w-3 h-3 bg-purple-400 rounded-full flex-shrink-0" aria-hidden="true">
+					</div>
+					<span class="text-sm font-medium text-gray-700">Sale</span>
+					<span class="text-sm text-gray-500">20%</span>
+				</div>
+				<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+					<div class="w-3 h-3 bg-teal-600 rounded-full flex-shrink-0" aria-hidden="true">
+					</div>
+					<span class="text-sm font-medium text-gray-700">Distribute</span>
+					<span class="text-sm text-gray-500">30%</span>
+				</div>
+				<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+					<div class="w-3 h-3 bg-orange-500 rounded-full flex-shrink-0" aria-hidden="true">
+					</div>
+					<span class="text-sm font-medium text-gray-700">Return</span>
+					<span class="text-sm text-gray-500">40%</span>
+				</div>
+			</div>
+		</div>
+		 @else
+		<div class="relative {{ $chartType==='doughnut' ? 'mt-[12px]' : '' }}">
+			<canvas id="chart-{{ $chartType }}-{{ Str::slug($title) }}" aria-labelledby="chart-title-{{ $chartType }}-{{ Str::slug($title) }} chart-desc-{{ $chartType }}-{{ Str::slug($title) }}" role="img" class="h-[{{ $height }}] ">
+			</canvas>
+		</div>
+		 @endif
+	</div>
 </div>
-
-@push('scripts')
+ @push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('chart-{{ $chartType }}-{{ Str::slug($title) }}');
     if (!canvas) return;
-
     const commonOptions = {
         responsive: true,
         maintainAspectRatio: false,
@@ -97,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             animateScale: true
         }
     };
-
     @if($chartType === 'line')
         new Chart(canvas, {
             type: 'line',
@@ -109,27 +87,21 @@ document.addEventListener('DOMContentLoaded', function() {
             borderColor: function(context) {
                 const chart = context.chart;
                 const { ctx, chartArea } = chart;
-
                 if (!chartArea) {
                     return '#6C9EEA';
                 }
-
                 const gradient = ctx.createLinearGradient(
                     chartArea.left, 0,
                     chartArea.right, 0
                 );
                 gradient.addColorStop(0, '#6C9EEA');     
                 gradient.addColorStop(1, '#0066FF');    
-
                 return gradient;
             },
-
             backgroundColor: function(context) {
                 const chart = context.chart;
                 const { ctx, chartArea } = chart;
-
                 if (!chartArea) return 'rgba(16, 132, 126, 0.15)';
-
                 const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
                 gradient.addColorStop(0, 'rgba(108, 158, 234, 0.2)'); 
                 gradient.addColorStop(1, 'rgba(0, 102, 255, 0.02)');
@@ -214,7 +186,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }]
         });
-
     @elseif($chartType === 'area')
         new Chart(canvas, {
             type: 'line',
@@ -283,7 +254,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 interaction: { mode: 'index', intersect: false }
             }
         });
-
     @elseif($chartType === 'doughnut')
    new Chart(canvas, {
     type: 'doughnut',
@@ -305,7 +275,6 @@ document.addEventListener('DOMContentLoaded', function() {
         responsive: true,
         maintainAspectRatio: false,
         cutout: '40%',
-
         plugins: {
             legend: {
                 position: 'bottom',
@@ -315,7 +284,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     padding: 16
                 }
             },
-
             tooltip: {
                 backgroundColor: 'rgba(15, 23, 42, 0.95)',
                 titleColor: '#ffffff',
@@ -331,21 +299,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             },
-
             datalabels: {
                 color: '#ffffff',
                 font: {
                     size: 14,
                     weight: 'bold',
                     family: "'Plus Jakarta Sans', sans-serif",
-                    
                 },
                 formatter: (value, ctx) => {
                     const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
                     const percent = ((value / total) * 100).toFixed(0);
                     return percent + '%';
                 },
-
                 /* PERFECT POSITIONING */
                 anchor: 'center',   // slice ke beech me
                 align: 'center',    // exactly center
@@ -355,7 +320,6 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     plugins: [ChartDataLabels]
 });
-
     @elseif(in_array($chartType, ['bar', 'bar-1']))
           new Chart(canvas, {
     type: 'bar',

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const searchInput = document.getElementById('action-search');
     const tableRows = document.querySelectorAll('.table-row');
+    const closebtn=document.querySelector("#close-filter-panel")
     
     let selectedFilters = [];
     let currentTab = 'all';
@@ -71,7 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
             filterTable();
         });
     });
+ closebtn.addEventListener("click",function(){
+            filterDropdown.classList.add('hidden');
 
+    
+ })
     searchInput.addEventListener('input', function() {
         searchQuery = this.value.toLowerCase();
         filterTable();
@@ -88,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             selectedFilters.forEach(filter => {
                 const pill = document.createElement('span');
-                pill.className = 'inline-flex items-center gap-1 px-3 py-1 bg-[#0066ff29] text-teal-700 rounded-full text-sm';
+                pill.className = 'inline-flex items-end gap-1 px-3 py-1 pb-[8px] bg-[#e5e7eb87] text-[rgba(3, 2, 41, 0.7)] rounded-full text-sm';
                 pill.innerHTML = `
                     <span>${filter.label}</span>
                     <button
@@ -96,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         data-filter-id="${filter.id}"
                         aria-label="Remove filter"
                     >
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 " fill="rgba(3, 2, 41, 0.7)" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </button>
