@@ -37,13 +37,29 @@ body{font-family: "Plus Jakarta Sans", sans-serif;
     .sort-icon.active {
         transform: rotate(180deg);
         }
+         .kpi_card {
+                position: relative;
+            }
+            .kpi_card img{
+                position: absolute;
+                right: 22px;
+                top: 22px;
+                /* padding: 1rem !important; */
+            }
         /* .sort-icon.active svg pah{fill:#cccc} */
         @media only screen and (min-width: 1200px) and (max-width:1366px) {
             .kpi_title {
                 font-size: 36px !important;
+                position: relative;
+            }
+             .kpi_card {
+                position: relative;
             }
             .kpi_card img{
+         
+                top: 22px;
                 /* padding: 1rem !important; */
                 height: 30px !important;
             }
+           
         }
