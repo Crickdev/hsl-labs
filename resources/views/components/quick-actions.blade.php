@@ -36,7 +36,7 @@
 		</button>
 		</li>
 		<li>
-		<button type="button" class="lg:flex text-center items-center flex-[auto] lg:px-[12px] grow-0 shrink-0 gap-2 py-1 rounded-lg text-white hover:bg-white hover:bg-opacity-30 focus-visible:outline-none focus-visible:bg-white focus-visible:bg-opacity-30 transition-colors" aria-label="Billing">
+		<button type="button" class="lg:flex pr-[15px] text-center items-center flex-[auto] lg:px-[12px] grow-0 shrink-0 gap-2 py-1 rounded-lg text-white hover:bg-white hover:bg-opacity-30 focus-visible:outline-none focus-visible:bg-white focus-visible:bg-opacity-30 transition-colors" aria-label="Billing">
 		<svg class="lg:m-0 mx-[auto]" width="20" height="20" viewbox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<g clip-path="url(#clip0_1044_86)">
 		<path d="M4.8323 11.511C4.68905 11.472 4.68905 11.476 4.53355 11.4417V10.8115C4.74505 10.8322 4.89905 11.0002 4.8993 11.1852L5.4593 11.1855C5.4593 10.7622 5.1068 10.3387 4.53355 10.265V9.93024H3.9973V10.265C3.4568 10.3365 3.1058 10.7397 3.1058 11.099C3.1058 11.4617 3.3398 11.7462 3.6778 11.8395C3.81005 11.8757 3.87905 11.8952 4.0023 11.919V12.591C3.7553 12.5402 3.63205 12.3277 3.63205 12.1677H3.06055C3.06055 12.5235 3.4253 13.068 3.9973 13.1335V13.492H4.53355V13.1335C5.1263 13.056 5.4858 12.7475 5.4858 12.2977C5.4858 12.005 5.36555 11.656 4.8323 11.511ZM3.9973 11.3435C3.75755 11.3007 3.6913 11.1982 3.6913 11.0877C3.6913 10.9587 3.8538 10.8342 3.9973 10.8175V11.3435ZM4.54005 12.5887V12.0207C4.7768 12.0547 4.9268 12.1565 4.9268 12.3027C4.9268 12.432 4.7873 12.5795 4.54005 12.5887Z" fill="white"/>

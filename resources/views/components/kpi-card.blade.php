@@ -1,5 +1,5 @@
 <div class="col-span-1">
-	<div class="bg-[{{$background}}] transition-all kpi_card duration-300 hover:shadow-[0_4px_14px_rgba(0,0,0,0.25)] rounded-[16.3861px] p-6">
+	<div class="bg-[{{$background}}] transition-all kpi_card lg:shadow-none md:shadow-[0_4px_14px_rgba(0,0,0,0.25)] shadow-[0_4px_14px_rgba(0,0,0,0.25)] duration-300 hover:shadow-[0_4px_14px_rgba(0,0,0,0.25)] rounded-[16.3861px] p-6">
 		<div class="flex justify-between items-start gap-10">
 			<div class="text-white">
 				<div class="text-[1rem] font-semibold">
