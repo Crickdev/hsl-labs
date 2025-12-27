@@ -1,12 +1,12 @@
 <div class="col-span-1">
-	<div class="bg-[{{$background}}] transition-all duration-300 hover:shadow-[0_4px_14px_rgba(0,0,0,0.25)] rounded-[16.3861px] p-6">
+	<div class="bg-[{{$background}}] transition-all kpi_card duration-300 hover:shadow-[0_4px_14px_rgba(0,0,0,0.25)] rounded-[16.3861px] p-6">
 		<div class="flex justify-between items-start gap-10">
 			<div class="text-white">
 				<div class="text-[1rem] font-semibold">
 					 {{$title}}
 				</div>
 				<div class="flex items-end gap-2 mt-[20px]">
-					<h3 class="md:text-[48px] text-[35px] font-[800] text-white leading-none counter-animation" data-target="{{$value}}">
+					<h3 class="md:text-[48px] kpi_title text-[35px] font-[800] text-white leading-none counter-animation" data-target="{{$value}}">
 					0 </h3>
 					<div class="text-[0.75rem] mb-[4px] flex gap-2 items-center leading-[2px] {{ $trend < 10 ? 'bg-[#FFE5E5] text-[#FF2A2A]' : 'bg-[#DFFDDD] text-[#008000]' }} rounded-[30px] px-[10px] py-[5px]">
 						 {{$trend}}% @if($trend < 10) <svg width="20" height="9" viewbox="0 0 15 9" fill="none">

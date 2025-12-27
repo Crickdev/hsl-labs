@@ -9,7 +9,7 @@
 		</div>
 		 @if($chartType === 'pie')
 		<div class="flex flex-col items-center mt-3" role="img" aria-labelledby="chart-title-{{ $chartType }}-{{ Str::slug($title) }} chart-desc-{{ $chartType }}-{{ Str::slug($title) }}">
-			<div class="relative w-[280px] h-[280px] lg:w-[220px] lg:h-[220px] mb-4">
+			<div class="relative w-[240px] h-[240px] lg:w-[230px] lg:h-[230px] mb-4">
 				<svg class="w-full h-full transform -rotate-90" viewbox="0 0 200 200" aria-hidden="true">
 				<title>Pie chart showing transaction distribution</title>
 				<circle cx="100" cy="100" r="80" fill="none" stroke="#f3f4f6" stroke-width="25"/>
@@ -51,9 +51,14 @@
 			</div>
 		</div>
 		 @else
-		<div class="relative {{ $chartType==='doughnut' ? 'mt-[12px]' : '' }}">
-			<canvas id="chart-{{ $chartType }}-{{ Str::slug($title) }}" aria-labelledby="chart-title-{{ $chartType }}-{{ Str::slug($title) }} chart-desc-{{ $chartType }}-{{ Str::slug($title) }}" role="img" class="h-[{{ $height }}] ">
-			</canvas>
+		<div class="relative {{ $chartType==='doughnut' ? 'mt-[14px]' : '' }}">
+			<canvas 
+    id="chart-{{ $chartType }}-{{ Str::slug($title) }}" 
+    aria-labelledby="chart-title-{{ $chartType }}-{{ Str::slug($title) }} chart-desc-{{ $chartType }}-{{ Str::slug($title) }}" 
+    role="img" 
+    class="{{ $chartType === 'doughnut' ? 'lg:h-[' . $height . '] h-[255px]' : 'h-[' . $height . ']' }} w-full"
+>
+</canvas>
 		</div>
 		 @endif
 	</div>

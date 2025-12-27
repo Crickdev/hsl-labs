@@ -38,3 +38,12 @@ body{font-family: "Plus Jakarta Sans", sans-serif;
         transform: rotate(180deg);
         }
         /* .sort-icon.active svg pah{fill:#cccc} */
+        @media only screen and (min-width: 1200px) and (max-width:1366px) {
+            .kpi_title {
+                font-size: 36px !important;
+            }
+            .kpi_card img{
+                /* padding: 1rem !important; */
+                height: 30px !important;
+            }
+        }
