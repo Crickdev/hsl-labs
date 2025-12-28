@@ -7,7 +7,7 @@
     <button
       type="button"
       onclick="openMenu()"
-      class="lg:h-9 lg:w-9  h-6 w-6 flex items-center justify-center rounded-md focus:outline-none focus:bg-[#efefef]"
+      class="lg:h-9 lg:w-9  h-10 w-10 flex items-center justify-center rounded-md focus:outline-none focus:bg-[#efefef]"
       aria-label="Open sidebar menu"
       aria-expanded="false"
       aria-controls="main-sidebar"
