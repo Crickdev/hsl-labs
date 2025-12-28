@@ -7,7 +7,7 @@
     <button
       type="button"
       onclick="openMenu()"
-      class="lg:h-5 lg:w-5  h-6 w-6 flex items-center justify-center rounded-md focus:outline-none focus:bg-[#efefef]"
+      class="lg:h-9 lg:w-9  h-6 w-6 flex items-center justify-center rounded-md focus:outline-none focus:bg-[#efefef]"
       aria-label="Open sidebar menu"
       aria-expanded="false"
       aria-controls="main-sidebar"
@@ -15,7 +15,7 @@
     >
       <img
         src="assets/images/leftmenu.svg"
-        class="h-full w-full"
+        class="h-full w-full p-2"
         alt=""
         aria-hidden="true"
       />
@@ -31,7 +31,7 @@
     
     <button
       type="button"
-      class="relative w-10 h-10 flex items-center justify-center rounded-md focus:outline-none focus:bg-[#efefef    ]"
+      class="relative w-10 h-10 flex items-center justify-center rounded-md focus:outline-none focus:bg-[#efefef]"
       aria-label="View notifications, 2 unread"
     >
       <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -52,7 +52,7 @@
         id="profile-trigger"
         type="button"
         onclick="toggleDropdown()"
-        class="flex items-center gap-3 rounded-lg focus:outline-none focus:rbg-gray-50 focus:ring-primary-color"
+        class="flex items-center gap-3 rounded-lg focus:outline-none focus:bg-[#efefef]"
         aria-haspopup="true"
         aria-expanded="false"
         aria-controls="profile-dropdown"
