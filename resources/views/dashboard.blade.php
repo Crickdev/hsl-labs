@@ -17,28 +17,28 @@
                <x-kpi-card
                   title="Patients"
                   value="120"
-                  icon="assets/images/icons/patient.svg"
+                  icon="assets/images/icons/healthcare_icons.svg"
                   trend="51"
                   background="linear-gradient(79.81deg,_#4188F2_7.62%,_#4188F2_41.63%,_#0066FF_94.59%)"
                   />
                <x-kpi-card
                   title="Order"
                   value="64"
-                  icon="assets/images/icons/order.svg"
+                  icon="assets/images/icons/order_icon.svg"
                   trend="32"
                   background="linear-gradient(79.81deg,_#FDA090_7.62%,_#F98381_41.63%,_#F66C74_94.59%)"
                   />
                <x-kpi-card
                   title="Inventory"
                   value="1680"
-                  icon="assets/images/icons/inventory.svg"
+                  icon="assets/images/icons/inventory_icon.svg"
                   trend="4"
                   background="linear-gradient(79.81deg,_#F0BD42_7.62%,_#FEBA3C_41.63%,_#EE9700_94.59%)"
                   />
                <x-kpi-card
                   title="Completed"
                   value="25"
-                  icon="assets/images/icons/tasks.svg"
+                  icon="assets/images/icons/complete_icon.svg"
                   trend="62"
                   background="linear-gradient(79.81deg,_#24ACA5_7.62%,_#259C96_41.63%,_#10847E_94.59%)"
                   />
