@@ -230,38 +230,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
         @case('bar')
         @case('bar-1')
-            chartConfig = {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-                    datasets: [{
-                        data: [23400, 15000, 30000, 22000, 10000, 23400, 5000],
-                        backgroundColor: ctx => ctx.parsed.y <= 15000 ? '#0066FF' : '#207F22',
-                        barPercentage: 0.45,
-                        categoryPercentage: 0.8,
-                        borderRadius: 5
-                    }]
-                },
-                options: {
-                    ...commonConfig,
-                    layout: { padding: { top: 30 } },
-                    plugins: {
-                        legend: { display: false },
-                        datalabels: {
-                            anchor: 'end',
-                            align: 'top',
-                            color: '#1e293b',
-                            font: { size: 12.5 },
-                            formatter: v => v.toLocaleString()
-                        }
-                    },
-                    scales: {
-                        x: { grid: { display: false }, ticks: { color: '#374151' } },
-                        y: { display: false, beginAtZero: true }
-                    }
-                },
-                plugins: [ChartDataLabels]
-            };
+     chartConfig = {
+    type: 'bar',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+            data: [23400, 15000, 30000, 22000, 10000, 23400, 5000],
+            backgroundColor: (ctx) => {
+                if (!ctx.chart?.data?.datasets?.[0]?.data) return '#207F22';
+                const value = ctx.chart.data.datasets[0].data[ctx.dataIndex];
+                return value <= 15000 ? '#0066FF' : '#207F22';
+            },
+            barPercentage: 0.45,
+            categoryPercentage: 0.8,
+            borderRadius: 5,
+            borderSkipped: false 
+        }]
+    },
+    options: {
+        ...commonConfig,
+        layout: { padding: { top: 30 } },
+        plugins: {
+            legend: { display: false },
+            datalabels: { 
+                anchor: 'end',
+                align: 'top',
+                color: '#1e293b',
+                font:   fontConfig,
+                formatter: (value) => value.toLocaleString()
+            }
+        },
+        scales: {
+            x: {
+                grid: { display: false },
+                ticks: {
+                    color: '#374151',
+                    font: fontConfig, 
+                    padding: 10
+                }
+            },
+            y: {
+                display: false,
+                beginAtZero: true,
+                  ticks: {
+                    color: 'rgba(3, 2, 41, 0.7)',                    
+                    font: fontConfig, 
+                    padding: 10
+                }
+            }
+        }
+    },
+    plugins: [ChartDataLabels] 
+};
             @break
     @endswitch
 

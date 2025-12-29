@@ -51,13 +51,13 @@
             <div class="grid grid-cols-12 gap-6 mb-8">
                <x-analytics-card
                   class="col-span-12 md:col-span-6 lg:col-span-4"
-                  title="Sales Overview"
+                  title="Patients"
                   chartType="line"
                   height="280px"
                   />
                <x-analytics-card
                   class="col-span-12 md:col-span-6 lg:col-span-4"
-                  title="Top Products"
+                  title="New Orders"
                   chartType="bar"
                   height="280px"
                   />
@@ -75,7 +75,7 @@
                </div>
                <x-analytics-card
                   class="col-span-12 md:col-span-6 lg:col-span-4"
-                  title="Customer Distribution"
+                  title="Analytics"
                   chartType="pie"
                   description="Customers by region"
                   height="253px"
